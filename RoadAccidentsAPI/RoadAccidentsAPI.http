@@ -1,0 +1,6 @@
+@RoadAccidentsAPI_HostAddress = http://localhost:5178
+
+GET {{RoadAccidentsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

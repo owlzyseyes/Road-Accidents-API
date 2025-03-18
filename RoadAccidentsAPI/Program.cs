@@ -5,6 +5,8 @@ using MongoDB.Driver;
 using MongoDB.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using RoadAccidentsAPI;
+using Testcontainers.MongoDb;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,12 +15,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "TheEmployeeAPI.xml"));
-});
 builder.Services.AddSwaggerGen();
 builder.Services.AddProblemDetails();
+builder.Services.AddAutoMapper(typeof(AccidentsMappingProfile).Assembly);
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddControllers(options =>
 {
@@ -44,5 +43,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Logger.LogInformation("Starting the app.");
 
 app.Run();

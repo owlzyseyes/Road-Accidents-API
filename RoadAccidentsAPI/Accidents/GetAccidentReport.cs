@@ -10,7 +10,7 @@ public class GetAccidentReport
     public string?  Description { get; set; }
     public int NumberOfVehiclesInvolved { get; set; }
     public AccidentSeverity Severity { get; set; }
-    public LightCondtions WeatherCondition { get; set; }
+    public LightConditions lightConditions { get; set; }
     public int? NumberOfCasualties { get; set; }
 
 }

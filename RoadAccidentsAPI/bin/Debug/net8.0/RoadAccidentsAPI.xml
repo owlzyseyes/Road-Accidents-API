@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RoadAccidentsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:RoadAccidentsAPI.Controllers.AccidentsController.GetAllAccidents(RoadAccidentsAPI.Accidents.GetAllAccidentsRequest)">
+            <summary>
+            Get all accidents.
+            </summary>
+            <returns>An array of all accidents.</returns>
+        </member>
+        <member name="M:RoadAccidentsAPI.Controllers.AccidentsController.ReportAccident(RoadAccidentsAPI.Accidents.ReportAccidentRequest)">
+            <summary>
+            Reports a new accident.
+            </summary>
+            <param name="request">The accident to be reported.</param>
+            <returns>A link to the accident that was reported.</returns>
+        </member>
+    </members>
+</doc>

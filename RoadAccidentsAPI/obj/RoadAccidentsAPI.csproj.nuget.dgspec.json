@@ -79,6 +79,10 @@
               "target": "Package",
               "version": "[8.2.3, )"
             },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -87,9 +91,13 @@
               "target": "Package",
               "version": "[4.3.0, )"
             },
+            "Testcontainers.PostgreSql": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "xunit": {
               "target": "Package",
-              "version": "[2.9.3, )"
+              "version": "[2.5.3, )"
             }
           },
           "imports": [

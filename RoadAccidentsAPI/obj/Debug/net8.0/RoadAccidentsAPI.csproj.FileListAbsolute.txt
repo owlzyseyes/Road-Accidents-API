@@ -154,3 +154,8 @@ C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\obj\Debug\
 C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\obj\Debug\net8.0\RoadAccidentsAPI.pdb
 C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\obj\Debug\net8.0\RoadAccidentsAPI.genruntimeconfig.cache
 C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\obj\Debug\net8.0\ref\RoadAccidentsAPI.dll
+C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\bin\Debug\net8.0\RoadAccidentsAPI.xml
+C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\obj\Debug\net8.0\RoadAccidentsAPI.xml
+C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\bin\Debug\net8.0\Npgsql.dll
+C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\owlzy\Documents\Projects\Road-Accidents-API\RoadAccidentsAPI\bin\Debug\net8.0\Testcontainers.PostgreSql.dll

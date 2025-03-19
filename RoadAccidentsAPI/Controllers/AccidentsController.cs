@@ -31,7 +31,9 @@ public class AccidentsController : BaseController
     public async Task<IActionResult> GetAllAccidents([FromQuery] GetAllAccidentsRequest request)
     {
         var accidents = await _dbContext.Accidents.ToArrayAsync();
+        
         return Ok(accidents);
+
     }
 
     
@@ -58,6 +60,8 @@ public class AccidentsController : BaseController
         var newAccident = _mapper.Map<Accident>(request);
         _dbContext.Accidents.Add(newAccident);
         await _dbContext.SaveChangesAsync();
+
+        _logger.LogInformation("Accident reported.");
 
         return CreatedAtAction(nameof(GetAllAccidents), new{id = newAccident.Id}, newAccident);
 

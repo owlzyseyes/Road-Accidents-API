@@ -10,7 +10,7 @@ public class ReportAccidentRequest
     public string?  Description { get; set; }
     public int? NumberOfVehiclesInvolved { get; set; }
     public AccidentSeverity Severity { get; set; }
-    public LightCondtions WeatherCondition { get; set; }
+    public LightConditions lightConditions { get; set; }
     public bool? IsFatalAccident { get; set; }
     public int? NumberOfCasualties { get; set; }
 }
@@ -41,6 +41,9 @@ public class ReportAccidentRequestValidator : AbstractValidator<ReportAccidentRe
             .When(x => x.NumberOfCasualties.HasValue);
 
         RuleFor(x => x.Severity)
+            .IsInEnum();
+        
+        RuleFor(x => x.lightConditions)
             .IsInEnum();
     }
 }

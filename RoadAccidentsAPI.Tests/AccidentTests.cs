@@ -1,14 +1,18 @@
+using Xunit;
+using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http.Json;
 using System.Net;
 using RoadAccidentsAPI.Accidents;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace RoadAccidentsAPI.Tests;
 
-public class BasicTests : IClassFixture<IntegrationTestWebAppFactory>
+public class AccidentTests : BaseIntegrationTest
 {
     private readonly IntegrationTestWebAppFactory _factory;
 
-    public BasicTests(IntegrationTestWebAppFactory factory)
+    public AccidentTests(IntegrationTestWebAppFactory factory) : base(factory)
     {
         _factory = factory;
     }
@@ -40,10 +44,6 @@ public class BasicTests : IClassFixture<IntegrationTestWebAppFactory>
 
         // Assert
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        if (response.StatusCode != HttpStatusCode.OK)
-        {
-            throw new Exception($"Failed with status code: {response.StatusCode}. Error: {content}");
-        }
     }
     
 
@@ -57,7 +57,7 @@ public class BasicTests : IClassFixture<IntegrationTestWebAppFactory>
             IncidentTime = DateTime.UtcNow,
             Location = "Test Location",
             Description = "Test accident for unit testing",
-            IsFatal = false,
+            IsFatal = true,
             NumberOfVehiclesInvolved = 2,
             lightConditions = LightConditions.Dark
         };
@@ -79,7 +79,7 @@ public class BasicTests : IClassFixture<IntegrationTestWebAppFactory>
             IncidentTime = DateTime.UtcNow.AddDays(5),
             Location = "",
             Description = "",
-            IsFatal = true,
+            IsFatal = false,
             NumberOfVehiclesInvolved = 0,
             lightConditions = LightConditions.Dark
         };
@@ -91,3 +91,4 @@ public class BasicTests : IClassFixture<IntegrationTestWebAppFactory>
         Assert.Equal(System.Net.HttpStatusCode.BadRequest, response.StatusCode);
     }
 }
+

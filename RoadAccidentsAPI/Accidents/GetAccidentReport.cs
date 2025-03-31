@@ -9,7 +9,7 @@ public class GetAccidentReport
     public string? Location { get; set; }
     public string?  Description { get; set; }
     public int NumberOfVehiclesInvolved { get; set; }
-    public AccidentSeverity Severity { get; set; }
+    public bool IsFatal { get; set; }
     public LightConditions lightConditions { get; set; }
     public int? NumberOfCasualties { get; set; }
 

@@ -22,7 +22,7 @@ public static class SeedData
                     Location = "Jua Kali",
                     Description = "Head-on collision",
                     NumberOfVehiclesInvolved = 2,
-                    Severity = AccidentSeverity.Fatal,
+                    IsFatal = true,
                     lightConditions = LightConditions.Dark
                 },
                 new Accident
@@ -31,7 +31,7 @@ public static class SeedData
                     Location = "VOK",
                     Description = "Head-on collision",
                     NumberOfVehiclesInvolved = 2,
-                    Severity = AccidentSeverity.Fatal,
+                    IsFatal = true,
                     lightConditions = LightConditions.Dark
                 }
             );

@@ -14,8 +14,5 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Accident> Accidents {get; set;}
-
-    protected AppDbContext()
-    {
-    }
+    
 }

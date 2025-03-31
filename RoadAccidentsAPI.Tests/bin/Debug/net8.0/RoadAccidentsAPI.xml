@@ -10,6 +10,13 @@
             </summary>
             <returns>An array of all accidents.</returns>
         </member>
+        <member name="M:RoadAccidentsAPI.Controllers.AccidentsController.GetAccidentById(System.Int32)">
+            <summary>
+            Gets an accident by ID.
+            </summary>
+            <param name="id">The ID of the employee.</param>
+            <returns>The single employee record.</returns>
+        </member>
         <member name="M:RoadAccidentsAPI.Controllers.AccidentsController.ReportAccident(RoadAccidentsAPI.Accidents.ReportAccidentRequest)">
             <summary>
             Reports a new accident.

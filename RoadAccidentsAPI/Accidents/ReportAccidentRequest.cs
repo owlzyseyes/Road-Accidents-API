@@ -9,9 +9,8 @@ public class ReportAccidentRequest
     public string? Location { get; set; }
     public string?  Description { get; set; }
     public int? NumberOfVehiclesInvolved { get; set; }
-    public AccidentSeverity Severity { get; set; }
+    public bool IsFatal { get; set; }
     public LightConditions lightConditions { get; set; }
-    public bool? IsFatalAccident { get; set; }
     public int? NumberOfCasualties { get; set; }
 }
 
@@ -22,7 +21,7 @@ public class ReportAccidentRequestValidator : AbstractValidator<ReportAccidentRe
         RuleFor(x => x.IncidentTime)
             .NotNull()
             .Must(x => x <= DateTime.UtcNow)
-            .WithMessage("Incident time cannot be in the future");
+            .WithMessage("Incident time cannot be in the future.");
 
         RuleFor(x => x.Location)
             .NotEmpty()
@@ -40,8 +39,8 @@ public class ReportAccidentRequestValidator : AbstractValidator<ReportAccidentRe
             .GreaterThanOrEqualTo(0)
             .When(x => x.NumberOfCasualties.HasValue);
 
-        RuleFor(x => x.Severity)
-            .IsInEnum();
+        RuleFor(x => x.IsFatal)
+            .NotNull();
         
         RuleFor(x => x.lightConditions)
             .IsInEnum();

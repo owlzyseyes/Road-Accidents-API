@@ -36,6 +36,31 @@ public class AccidentsController : BaseController
 
     }
 
+
+    /// <summary>
+    /// Gets an accident by ID.
+    /// </summary>
+    /// <param name="id">The ID of the employee.</param>
+    /// <returns>The single employee record.</returns>
+    [HttpGet("{id:int}")]
+    [ProducesResponseType(typeof(GetAccidentReport), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> GetAccidentById([FromRoute] int id)
+    {
+        var accident = await _dbContext.Accidents.FindAsync(id);
+
+        if(accident == null)
+        {
+            return NotFound();
+        }
+
+        var response = _mapper.Map<GetAccidentReport>(accident);
+        
+        return Ok(response);
+    }
+
     
     
     /// <summary>

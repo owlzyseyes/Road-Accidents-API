@@ -175,6 +175,10 @@
               "target": "Package",
               "version": "[6.6.2, )"
             },
+            "Testcontainers": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Testcontainers.MongoDb": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -182,10 +186,6 @@
             "Testcontainers.PostgreSql": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.5.3, )"
             }
           },
           "imports": [

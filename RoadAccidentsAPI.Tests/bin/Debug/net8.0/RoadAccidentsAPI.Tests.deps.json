@@ -2759,9 +2759,9 @@
           "MongoDB.EntityFrameworkCore": "8.2.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
           "Swashbuckle.AspNetCore": "6.6.2",
+          "Testcontainers": "4.3.0",
           "Testcontainers.MongoDb": "4.3.0",
-          "Testcontainers.PostgreSql": "4.3.0",
-          "xunit": "2.5.3"
+          "Testcontainers.PostgreSql": "4.3.0"
         },
         "runtime": {
           "RoadAccidentsAPI.dll": {

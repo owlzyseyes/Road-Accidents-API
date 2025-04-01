@@ -1,7 +1,3 @@
-using System;
-using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace RoadAccidentsAPI;
@@ -23,7 +19,8 @@ public static class SeedData
                     Description = "Head-on collision",
                     NumberOfVehiclesInvolved = 2,
                     IsFatal = true,
-                    lightConditions = LightConditions.Dark
+                    lightConditions = LightConditions.Dark,
+                    NumberOfCasualties = 4
                 },
                 new Accident
                 {
@@ -32,7 +29,8 @@ public static class SeedData
                     Description = "Head-on collision",
                     NumberOfVehiclesInvolved = 2,
                     IsFatal = true,
-                    lightConditions = LightConditions.Dark
+                    lightConditions = LightConditions.Dark,
+                    NumberOfCasualties = 2
                 }
             );
 

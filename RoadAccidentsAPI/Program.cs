@@ -36,6 +36,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 });
 builder.Services.AddHttpContextAccessor();
 
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddHostedService<DatabaseInitializationService>();
+}
 
 var app = builder.Build();
 

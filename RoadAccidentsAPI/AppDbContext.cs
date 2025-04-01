@@ -8,11 +8,13 @@ public class AppDbContext : DbContext
     {
     }
 
+    public DbSet<Accident> Accidents {get; set;}
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Accident>().ToTable("Accidents");
     }
 
-    public DbSet<Accident> Accidents {get; set;}
     
 }

@@ -24,5 +24,17 @@
             <param name="request">The accident to be reported.</param>
             <returns>A link to the accident that was reported.</returns>
         </member>
+        <member name="T:RoadAccidentsAPI.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:RoadAccidentsAPI.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RoadAccidentsAPI.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RoadAccidentsAPI.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

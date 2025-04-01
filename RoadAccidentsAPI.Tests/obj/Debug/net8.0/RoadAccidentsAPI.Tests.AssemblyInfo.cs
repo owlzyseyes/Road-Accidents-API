@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoadAccidentsAPI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3beff19f07c7d99da6d39bad4d548a5e65c26e00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed844e5433affb38295d91cc5f145816174632c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadAccidentsAPI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadAccidentsAPI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -85,7 +85,7 @@ public class AccidentTests : BaseIntegrationTest
         var response = await client.PostAsJsonAsync("/accidents", badaccidentRequest);
 
         // Assert
-        Assert.Equal(System.Net.HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
     }
 }
 
